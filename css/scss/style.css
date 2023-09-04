@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* p {
+  font-family: "Inter", sans-serif;
+}
+* h1,
+* h2,
+* h3,
+* h4,
+* h5,
+* h6 {
+  font-family: "Duru Sans", sans-serif;
+}
+
+.container {
+  margin: auto;
+  max-width: 95em;
+}
+
+header {
+  background-color: #f0efe9;
+}
+header .header-wrapper {
+  display: flex;
+}
+header .header-wrapper .header-logo {
+  display: flex;
+  width: 196px;
+  height: 112px;
+  justify-content: space-around;
+  align-items: center;
+}
+header .header-wrapper .header-logo img {
+  width: 139px;
+  height: 52.1px;
+}
+header .header-wrapper .header-info {
+  width: 100%;
+}
+header .header-wrapper .header-info .header-info-top {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-wrapper .header-info .header-info-top .header-info-top-left {
+  display: flex;
+}
+header .header-wrapper .header-info .header-info-top .header-info-top-left .header-info-top-item {
+  display: flex;
+}
+header .header-wrapper .header-info .header-info-down {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-wrapper .header-info .header-info-down .header-info-top-left {
+  display: flex;
+}

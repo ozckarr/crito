@@ -1,0 +1,70 @@
+@import "./pages/home";
+//@import "./pages/newDetails";
+//@import "./pages/news";
+@import "./pages/contact";
+
+$beige: #f0efe9;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  p {
+    font-family: "Inter", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Duru Sans", sans-serif;
+  }
+}
+
+.container {
+  margin: auto;
+  max-width: 95em;
+}
+
+// Header
+header {
+  background-color: $beige;
+  .header-wrapper {
+    display: flex;
+    .header-logo {
+      display: flex;
+      width: 196px;
+      height: 112px;
+      justify-content: space-around;
+      align-items: center;
+      img {
+        width: 139px;
+        height: 52.1px;
+      }
+    }
+    .header-info {
+      width: 100%;
+      .header-info-top {
+        display: flex;
+        justify-content: space-between;
+        .header-info-top-left {
+          display: flex;
+          .header-info-top-item {
+            display: flex;
+          }
+        }
+      }
+      .header-info-down {
+        display: flex;
+        justify-content: space-between;
+        .header-info-top-left {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+  }
+}
