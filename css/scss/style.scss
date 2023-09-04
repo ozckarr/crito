@@ -4,13 +4,20 @@
 @import "./pages/contact";
 
 $beige: #f0efe9;
+$yellow: #f9d783;
+$lightGrey: #dad9d3;
+$darkGrey: #a4a4a4;
+$blackish: #191919;
+$lightBlue: #beebff;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  a,
   p {
     font-family: "Inter", sans-serif;
+    color: $blackish;
   }
   h1,
   h2,
@@ -19,6 +26,7 @@ $beige: #f0efe9;
   h5,
   h6 {
     font-family: "Duru Sans", sans-serif;
+    color: $blackish;
   }
 }
 
@@ -32,6 +40,8 @@ header {
   background-color: $beige;
   .header-wrapper {
     display: flex;
+    height: 7.5em;
+    padding: 0 0.5em;
     .header-logo {
       display: flex;
       width: 196px;
@@ -45,26 +55,106 @@ header {
     }
     .header-info {
       width: 100%;
+      padding-left: 2em;
       .header-info-top {
         display: flex;
         justify-content: space-between;
+        height: 3.125em;
+        border-bottom: solid 0.125em $lightGrey;
+        align-items: center;
+        img {
+          height: 1em;
+        }
+
         .header-info-top-left {
           display: flex;
           .header-info-top-item {
             display: flex;
+            align-items: center;
+            padding: 0.2em 0.75em;
+            border-right: solid 0.125em $lightGrey;
+            svg {
+              padding-right: 0.5em;
+            }
+            &:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+        .header-info-top-right {
+          width: 7em;
+          display: flex;
+          justify-content: space-between;
+          svg {
+            cursor: pointer;
+            &:hover {
+              color: $darkGrey;
+            }
           }
         }
       }
       .header-info-down {
         display: flex;
         justify-content: space-between;
-        .header-info-top-left {
+        height: 4.375em;
+
+        .header-info-down-left {
           display: flex;
+          align-items: flex-end;
+          padding-bottom: 0.5em;
+          a.selected::after {
+            display: block;
+            content: "";
+            width: 1em;
+            height: 0.125em;
+            background: $blackish;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 0.5em);
+          }
+          a {
+            text-decoration: none;
+            color: $blackish;
+            position: relative;
+            height: 1.5em;
+            width: 5em;
+            text-align: center;
+            h2 {
+              font-size: 1em;
+              &:hover {
+                text-shadow: 0.0625em 0 0 currentColor;
+              }
+            }
+          }
+        }
+        .header-info-down-right {
+          display: flex;
+          align-items: end;
+          height: 100%;
         }
       }
     }
   }
 
   @media (min-width: 768px) {
+  }
+}
+
+.crito-button {
+  background-color: $yellow;
+  border: none;
+  border-radius: 5em;
+  font-size: 1em;
+  padding: 0.9em 2em 0.9em 2em;
+  font-weight: 600;
+
+  img {
+    height: 0.95em;
+    width: 0.95em;
+    padding-left: 0.5em;
   }
 }

@@ -12,14 +12,16 @@
     <link rel="stylesheet" type="text/css" href="./css/scss/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
     />
+
+    <script
+      src="https://kit.fontawesome.com/53ada60d1c.js"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Crito</title>
   </head>
   <body>
@@ -32,33 +34,38 @@
           <div class="header-info-top">
             <div class="header-info-top-left">
               <div class="header-info-top-tel header-info-top-item">
-                <img src="./css/images/icons/phone.svg" alt="" />
+                <i class="fa-solid fa-phone-volume"></i>
                 <p>+46 (8) 121 470 50</p>
               </div>
               <div class="header-info-top-mail header-info-top-item">
-                <img src="./css/images/icons/mail.svg" alt="" />
+                <i class="fa-regular fa-envelope"></i>
                 <p>info@crito.com</p>
               </div>
               <div class="header-info-top-address header-info-top-item">
-                <img src="./css/images/icons/location.svg" alt="" />
+                <i class="fa-solid fa-location-dot"></i>
                 <p>Sveavägen 31, 111 34 STOCKHOLM</p>
               </div>
             </div>
             <div class="header-info-top-right">
-              <img src="./css/images/icons/facebook.svg" alt="" />
-              <img src="./css/images/icons/twitter.svg" alt="" />
-              <img src="./css/images/icons/instagram.svg" alt="" />
-              <img src="./css/images/icons/linkedin.svg" alt="" />
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin"></i>
             </div>
           </div>
           <div class="header-info-down">
             <div class="header-info-down-left">
-              <a href="#"><h2>Home</h2></a>
+              <a href="#" class="selected"><h2>Home</h2></a>
               <a href="#"><h2>Service</h2></a>
               <a href="#"><h2>News</h2></a>
               <a href="#"><h2>Contacts</h2></a>
             </div>
-            <div class="header-info-down-right"></div>
+
+            <div class="header-info-down-right">
+              <button class="crito-button">
+                Login<img src="./css/images/icons/arrow.svg" alt="" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
