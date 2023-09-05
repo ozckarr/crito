@@ -9,6 +9,7 @@ $lightGrey: #dad9d3;
 $darkGrey: #a4a4a4;
 $blackish: #191919;
 $lightBlue: #beebff;
+$darkBlue: #0e1021;
 
 * {
   margin: 0;
@@ -18,6 +19,8 @@ $lightBlue: #beebff;
   p {
     font-family: "Inter", sans-serif;
     color: $blackish;
+    line-height: 1.625em;
+    font-size: 1em;
   }
   h1,
   h2,
@@ -25,14 +28,23 @@ $lightBlue: #beebff;
   h4,
   h5,
   h6 {
-    font-family: "Duru Sans", sans-serif;
+    font-family: "DM Sans", sans-serif;
     color: $blackish;
+  }
+  h3 {
+    font-size: 1.375em;
+    line-height: 2em;
   }
 }
 
 .container {
   margin: auto;
   max-width: 95em;
+}
+
+main {
+  height: 10em;
+  background-color: purple;
 }
 
 // Header
@@ -151,10 +163,85 @@ header {
   font-size: 1em;
   padding: 0.9em 2em 0.9em 2em;
   font-weight: 600;
-
-  img {
-    height: 0.95em;
-    width: 0.95em;
+  display: flex;
+  .crito-button-symbol {
     padding-left: 0.5em;
+
+    svg {
+      height: 0.95em;
+      width: 0.95em;
+      transform: rotate(-45deg);
+    }
+  }
+  &:hover {
+    background-color: $blackish;
+    color: $yellow;
+  }
+}
+
+// Footer
+footer {
+  height: 32em;
+  background-color: $darkBlue;
+  display: flex;
+  flex-direction: column;
+
+  svg,
+  h3,
+  a,
+  p {
+    color: $lightGrey;
+  }
+  .footer-links-container {
+    padding: 0 1em;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+
+    .footer-maintext {
+      .footer-maintext-logo {
+        padding-bottom: 1.8em;
+      }
+    }
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      padding-right: 2em;
+      &:last-child {
+        padding-right: 0em;
+      }
+      h3 {
+        padding-bottom: 2.625em;
+      }
+      a {
+        line-height: 40px;
+        text-decoration: none;
+        font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .copy-right {
+    height: 5em;
+    border-top: $darkGrey 0.0625em solid;
+    padding: 0 1em;
+    .copy-right-items {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      svg {
+        padding-right: 1em;
+        cursor: pointer;
+        &:last-child {
+          padding-right: 0em;
+        }
+        &:hover {
+          color: #f9d783;
+        }
+      }
+    }
   }
 }
