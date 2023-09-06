@@ -1,3 +1,53 @@
+.showcase {
+  background-color: #f0efe9;
+  height: 48.75em;
+}
+.showcase .showcase-container {
+  display: flex;
+}
+.showcase .showcase-container .showcase-left {
+  padding: 7.5em 2em 0 1em;
+}
+.showcase .showcase-container .showcase-left h1 {
+  font-size: 6em;
+  font-weight: bold;
+}
+.showcase .showcase-container .showcase-left p {
+  font-size: 1.25em;
+  padding-bottom: 3.2em;
+}
+.showcase .showcase-container .showcase-left .showcase-buttons {
+  display: flex;
+}
+.showcase .showcase-container .showcase-left .showcase-buttons button {
+  margin-right: 1em;
+}
+.showcase .showcase-container .showcase-left .showcase-swirl {
+  position: relative;
+}
+.showcase .showcase-container .showcase-left .showcase-swirl img {
+  position: absolute;
+  right: 2em;
+  top: -7.6em;
+}
+.showcase .showcase-container .showcase-right {
+  position: relative;
+  width: 78em;
+}
+.showcase .showcase-container .showcase-right img {
+  position: absolute;
+  top: 3.4em;
+  left: -5em;
+}
+
+.partners {
+  min-height: 106em;
+}
+.partners .partners-brands {
+  padding: 4.5em 0 5em 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
 * {
   margin: 0;
   padding: 0;
@@ -26,12 +76,12 @@
 
 .container {
   margin: auto;
-  max-width: 95em;
+  max-width: 82.5em;
 }
 
-main {
-  height: 10em;
-  background-color: purple;
+.large-container {
+  margin: auto;
+  max-width: 95em;
 }
 
 header {
@@ -44,14 +94,14 @@ header .header-wrapper {
 }
 header .header-wrapper .header-logo {
   display: flex;
-  width: 196px;
-  height: 112px;
+  width: 12.25em;
+  height: 7em;
   justify-content: space-around;
   align-items: center;
 }
 header .header-wrapper .header-logo img {
-  width: 139px;
-  height: 52.1px;
+  width: 8.6875em;
+  height: 3.25em;
 }
 header .header-wrapper .header-info {
   width: 100%;
@@ -136,28 +186,6 @@ header .header-wrapper .header-info .header-info-down .header-info-down-right {
   align-items: end;
   height: 100%;
 }
-.crito-button {
-  background-color: #f9d783;
-  border: none;
-  border-radius: 5em;
-  font-size: 1em;
-  padding: 0.9em 2em 0.9em 2em;
-  font-weight: 600;
-  display: flex;
-}
-.crito-button .crito-button-symbol {
-  padding-left: 0.5em;
-}
-.crito-button .crito-button-symbol svg {
-  height: 0.95em;
-  width: 0.95em;
-  transform: rotate(-45deg);
-}
-.crito-button:hover {
-  background-color: #191919;
-  color: #f9d783;
-}
-
 footer {
   height: 32em;
   background-color: #0e1021;
@@ -174,23 +202,20 @@ footer .footer-links-container {
   padding: 0 1em;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr auto;
-}
-footer .footer-links-container .footer-maintext .footer-maintext-logo {
-  padding-bottom: 1.8em;
+  grid-gap: 2em;
 }
 footer .footer-links-container .footer-content {
   display: flex;
   flex-direction: column;
-  padding-right: 2em;
 }
 footer .footer-links-container .footer-content:last-child {
   padding-right: 0em;
 }
 footer .footer-links-container .footer-content h3 {
-  padding-bottom: 2.625em;
+  padding-bottom: 1.5em;
 }
 footer .footer-links-container .footer-content a {
-  line-height: 40px;
+  line-height: 2.5em;
   text-decoration: none;
   font-weight: 500;
 }
@@ -217,4 +242,49 @@ footer .copy-right .copy-right-items svg:last-child {
 }
 footer .copy-right .copy-right-items svg:hover {
   color: #f9d783;
+}
+
+.crito-button {
+  background-color: #f9d783;
+  border: none;
+  border-radius: 5em;
+  font-size: 1em;
+  padding: 0.9em 2em 0.9em 2em;
+  font-weight: 600;
+  display: flex;
+}
+.crito-button .crito-button-symbol {
+  padding-left: 0.5em;
+}
+.crito-button .crito-button-symbol svg {
+  height: 0.95em;
+  width: 0.95em;
+  transform: rotate(-45deg);
+}
+.crito-button:hover {
+  background-color: #191919;
+  color: #f9d783;
+}
+
+.crito-button-blanc {
+  background-color: #f0efe9;
+  border: none;
+  border-radius: 5em;
+  font-size: 1em;
+  padding: 0.9em 2em 0.9em 2em;
+  font-weight: 600;
+  display: flex;
+  border: 0.025em solid #191919;
+}
+.crito-button-blanc .crito-button-symbol {
+  padding-left: 0.5em;
+}
+.crito-button-blanc .crito-button-symbol svg {
+  height: 0.95em;
+  width: 0.95em;
+  transform: rotate(-45deg);
+}
+.crito-button-blanc:hover {
+  background-color: #191919;
+  color: #f0efe9;
 }

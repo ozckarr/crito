@@ -39,12 +39,11 @@ $darkBlue: #0e1021;
 
 .container {
   margin: auto;
-  max-width: 95em;
+  max-width: 82.5em;
 }
-
-main {
-  height: 10em;
-  background-color: purple;
+.large-container {
+  margin: auto;
+  max-width: 95em;
 }
 
 // Header
@@ -56,13 +55,13 @@ header {
     padding: 0 0.5em;
     .header-logo {
       display: flex;
-      width: 196px;
-      height: 112px;
+      width: 12.25em;
+      height: 7em;
       justify-content: space-around;
       align-items: center;
       img {
-        width: 139px;
-        height: 52.1px;
+        width: 8.6875em;
+        height: 3.25em;
       }
     }
     .header-info {
@@ -156,29 +155,6 @@ header {
   }
 }
 
-.crito-button {
-  background-color: $yellow;
-  border: none;
-  border-radius: 5em;
-  font-size: 1em;
-  padding: 0.9em 2em 0.9em 2em;
-  font-weight: 600;
-  display: flex;
-  .crito-button-symbol {
-    padding-left: 0.5em;
-
-    svg {
-      height: 0.95em;
-      width: 0.95em;
-      transform: rotate(-45deg);
-    }
-  }
-  &:hover {
-    background-color: $blackish;
-    color: $yellow;
-  }
-}
-
 // Footer
 footer {
   height: 32em;
@@ -196,24 +172,19 @@ footer {
     padding: 0 1em;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    grid-gap: 2em;
 
-    .footer-maintext {
-      .footer-maintext-logo {
-        padding-bottom: 1.8em;
-      }
-    }
     .footer-content {
       display: flex;
       flex-direction: column;
-      padding-right: 2em;
       &:last-child {
         padding-right: 0em;
       }
       h3 {
-        padding-bottom: 2.625em;
+        padding-bottom: 1.5em;
       }
       a {
-        line-height: 40px;
+        line-height: 2.5em;
         text-decoration: none;
         font-weight: 500;
         &:hover {
@@ -243,5 +214,52 @@ footer {
         }
       }
     }
+  }
+}
+
+// Buttons
+.crito-button {
+  background-color: $yellow;
+  border: none;
+  border-radius: 5em;
+  font-size: 1em;
+  padding: 0.9em 2em 0.9em 2em;
+  font-weight: 600;
+  display: flex;
+  .crito-button-symbol {
+    padding-left: 0.5em;
+
+    svg {
+      height: 0.95em;
+      width: 0.95em;
+      transform: rotate(-45deg);
+    }
+  }
+  &:hover {
+    background-color: $blackish;
+    color: $yellow;
+  }
+}
+.crito-button-blanc {
+  background-color: $beige;
+  border: none;
+  border-radius: 5em;
+  font-size: 1em;
+  padding: 0.9em 2em 0.9em 2em;
+  font-weight: 600;
+  display: flex;
+  border: 0.025em solid $blackish;
+  .crito-button-symbol {
+    padding-left: 0.5em;
+
+    svg {
+      height: 0.95em;
+      width: 0.95em;
+      transform: rotate(-45deg);
+    }
+  }
+  &:hover {
+    background-color: $blackish;
+    color: $beige;
   }
 }
