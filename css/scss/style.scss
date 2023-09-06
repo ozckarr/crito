@@ -5,6 +5,7 @@
 
 $beige: #f0efe9;
 $yellow: #f9d783;
+$orange: #f94d1c;
 $lightGrey: #dad9d3;
 $darkGrey: #a4a4a4;
 $blackish: #191919;
@@ -40,10 +41,6 @@ $darkBlue: #0e1021;
 .container {
   margin: auto;
   max-width: 82.5em;
-}
-.large-container {
-  margin: auto;
-  max-width: 95em;
 }
 
 // Header
@@ -219,6 +216,7 @@ footer {
 
 // Buttons
 .crito-button {
+  justify-content: center;
   background-color: $yellow;
   border: none;
   border-radius: 5em;
@@ -239,27 +237,16 @@ footer {
     background-color: $blackish;
     color: $yellow;
   }
-}
-.crito-button-blanc {
-  background-color: $beige;
-  border: none;
-  border-radius: 5em;
-  font-size: 1em;
-  padding: 0.9em 2em 0.9em 2em;
-  font-weight: 600;
-  display: flex;
-  border: 0.025em solid $blackish;
-  .crito-button-symbol {
-    padding-left: 0.5em;
 
-    svg {
-      height: 0.95em;
-      width: 0.95em;
-      transform: rotate(-45deg);
-    }
+  &.crito-button-wide {
+    width: 100%;
   }
-  &:hover {
-    background-color: $blackish;
-    color: $beige;
+  &.crito-button-blanc {
+    background-color: $beige;
+    border: 0.025em solid $blackish;
+    &:hover {
+      background-color: $blackish;
+      color: $beige;
+    }
   }
 }

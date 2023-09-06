@@ -5,6 +5,7 @@ $darkGrey: #a4a4a4;
 $blackish: #191919;
 $lightBlue: #beebff;
 $darkBlue: #0e1021;
+$orange: #f94d1c;
 
 // Showcase
 .showcase {
@@ -51,14 +52,48 @@ $darkBlue: #0e1021;
 
 // Partners
 .partners {
-  min-height: 106em;
   .partners-brands {
     padding: 4.5em 0 5em 0;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
   }
   .partners-model {
-  }
-  .partners-about-company {
+    display: flex;
+    margin: auto;
+    padding: 5em 6.25em 7em;
+    max-width: 95em;
+    border: $lightGrey solid 0.0625em;
+    .partners-model-left {
+      max-width: 28.75em;
+      h5 {
+        color: $orange;
+        font-size: 1.125em;
+        padding-bottom: 1em;
+      }
+      h1 {
+        font-size: 2.8em;
+        font-weight: 900;
+        padding-bottom: 1em;
+      }
+    }
+    .partners-model-right {
+      display: grid;
+      grid-template-columns: auto auto;
+      margin-left: 6em;
+      .partners-model-card {
+        padding: 2.5em 1.875em;
+        svg {
+          height: 2.5em;
+          width: 2.5em;
+          padding-bottom: 1.5em;
+        }
+        h3 {
+          font-size: 1.375em;
+        }
+        p {
+          color: $darkGrey;
+        }
+      }
+    }
   }
 }

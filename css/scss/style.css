@@ -40,14 +40,51 @@
   left: -5em;
 }
 
-.partners {
-  min-height: 106em;
-}
 .partners .partners-brands {
   padding: 4.5em 0 5em 0;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
 }
+.partners .partners-model {
+  display: flex;
+  margin: auto;
+  padding: 5em 6.25em 7em;
+  max-width: 95em;
+  border: #dad9d3 solid 0.0625em;
+}
+.partners .partners-model .partners-model-left {
+  max-width: 28.75em;
+}
+.partners .partners-model .partners-model-left h5 {
+  color: #f94d1c;
+  font-size: 1.125em;
+  padding-bottom: 1em;
+}
+.partners .partners-model .partners-model-left h1 {
+  font-size: 2.8em;
+  font-weight: 900;
+  padding-bottom: 1em;
+}
+.partners .partners-model .partners-model-right {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: 6em;
+}
+.partners .partners-model .partners-model-right .partners-model-card {
+  padding: 2.5em 1.875em;
+}
+.partners .partners-model .partners-model-right .partners-model-card svg {
+  height: 2.5em;
+  width: 2.5em;
+  padding-bottom: 1.5em;
+}
+.partners .partners-model .partners-model-right .partners-model-card h3 {
+  font-size: 1.375em;
+}
+.partners .partners-model .partners-model-right .partners-model-card p {
+  color: #a4a4a4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -77,11 +114,6 @@
 .container {
   margin: auto;
   max-width: 82.5em;
-}
-
-.large-container {
-  margin: auto;
-  max-width: 95em;
 }
 
 header {
@@ -245,6 +277,7 @@ footer .copy-right .copy-right-items svg:hover {
 }
 
 .crito-button {
+  justify-content: center;
   background-color: #f9d783;
   border: none;
   border-radius: 5em;
@@ -265,26 +298,14 @@ footer .copy-right .copy-right-items svg:hover {
   background-color: #191919;
   color: #f9d783;
 }
-
-.crito-button-blanc {
+.crito-button.crito-button-wide {
+  width: 100%;
+}
+.crito-button.crito-button-blanc {
   background-color: #f0efe9;
-  border: none;
-  border-radius: 5em;
-  font-size: 1em;
-  padding: 0.9em 2em 0.9em 2em;
-  font-weight: 600;
-  display: flex;
   border: 0.025em solid #191919;
 }
-.crito-button-blanc .crito-button-symbol {
-  padding-left: 0.5em;
-}
-.crito-button-blanc .crito-button-symbol svg {
-  height: 0.95em;
-  width: 0.95em;
-  transform: rotate(-45deg);
-}
-.crito-button-blanc:hover {
+.crito-button.crito-button-blanc:hover {
   background-color: #191919;
   color: #f0efe9;
 }
