@@ -32,9 +32,18 @@ $darkBlue: #0e1021;
     font-family: "DM Sans", sans-serif;
     color: $blackish;
   }
+  h1 {
+    font-size: 2.8em;
+    font-weight: 900;
+  }
   h3 {
     font-size: 1.375em;
     line-height: 2em;
+  }
+  h5 {
+    color: $orange;
+    font-size: 1.125em;
+    padding-bottom: 1em;
   }
 }
 
@@ -143,18 +152,55 @@ header {
           display: flex;
           align-items: end;
           height: 100%;
+          svg {
+            height: 3em;
+            width: 3em;
+            display: none;
+          }
         }
       }
     }
   }
 
-  @media (min-width: 768px) {
+  @media screen and (max-width: 1025px) {
+    .header-wrapper .header-info {
+      .header-info-top {
+        display: none;
+      }
+      .header-info-down {
+        height: 5.2em;
+        .header-info-down-left {
+          padding-bottom: 1em;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .header-wrapper .header-info {
+      .header-info-top {
+        display: none;
+      }
+      .header-info-down {
+        justify-content: flex-end;
+        .header-info-down-right {
+          svg {
+            display: block;
+          }
+          .crito-button {
+            display: none;
+          }
+        }
+        .header-info-down-left {
+          display: none;
+        }
+      }
+    }
   }
 }
 
 // Footer
 footer {
-  height: 32em;
+  min-height: 32em;
   background-color: $darkBlue;
   display: flex;
   flex-direction: column;
@@ -212,10 +258,81 @@ footer {
       }
     }
   }
+  @media screen and (max-width: 1200px) {
+    .footer-links-container {
+      grid-template-columns: auto;
+      margin: 114px 1em;
+      grid-template-areas:
+        "maintext maintext"
+        "company  help"
+        "resources  link";
+      .footer-maintext {
+        grid-area: maintext;
+      }
+      .footer-links-company {
+        grid-area: company;
+      }
+      .footer-links-help {
+        grid-area: help;
+      }
+      .footer-links-resources {
+        grid-area: resources;
+      }
+      .footer-links-link {
+        grid-area: link;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .copy-right {
+      height: 8em;
+      padding: 2em 1em;
+      text-align: center;
+      .copy-right-items {
+        flex-direction: column;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .footer-links-container {
+      grid-template-areas:
+        "maintext"
+        "company"
+        "help"
+        "resources"
+        "link";
+      .footer-maintext {
+        grid-area: maintext;
+      }
+      .footer-links-company {
+        grid-area: company;
+      }
+      .footer-links-help {
+        grid-area: help;
+      }
+      .footer-links-resources {
+        grid-area: resources;
+      }
+      .footer-links-link {
+        grid-area: link;
+      }
+      .footer-content h3 {
+        padding-bottom: 1em;
+      }
+    }
+    .copy-right {
+      height: auto;
+      p {
+        padding-bottom: 1em;
+      }
+    }
+  }
 }
 
 // Buttons
 .crito-button {
+  cursor: pointer;
+
   justify-content: center;
   background-color: $yellow;
   border: none;
@@ -224,6 +341,7 @@ footer {
   padding: 0.9em 2em 0.9em 2em;
   font-weight: 600;
   display: flex;
+  border: 0.025em solid $yellow;
   .crito-button-symbol {
     padding-left: 0.5em;
 
@@ -236,6 +354,7 @@ footer {
   &:hover {
     background-color: $blackish;
     color: $yellow;
+    border: 0.025em solid $yellow;
   }
 
   &.crito-button-wide {
@@ -247,6 +366,33 @@ footer {
     &:hover {
       background-color: $blackish;
       color: $beige;
+    }
+  }
+  &.crito-button-black {
+    background-color: $blackish;
+    color: white;
+    &:hover {
+      border: 0.025em solid $blackish;
+      background-color: white;
+      color: $blackish;
+    }
+  }
+}
+
+.crito-button-round {
+  cursor: pointer;
+  border-radius: 50%;
+  height: 3.6em;
+  width: 3.6em;
+  background-color: white;
+  svg {
+    height: 0.95em;
+    width: 0.95em;
+  }
+  &:hover {
+    background-color: $blackish;
+    svg {
+      color: white;
     }
   }
 }

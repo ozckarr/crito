@@ -11,6 +11,7 @@ $orange: #f94d1c;
 .showcase {
   background-color: $beige;
   height: 48.75em;
+  overflow: hidden;
   .showcase-container {
     display: flex;
     .showcase-left {
@@ -31,6 +32,8 @@ $orange: #f94d1c;
       }
       .showcase-swirl {
         position: relative;
+        pointer-events: none;
+
         img {
           position: absolute;
           right: 2em;
@@ -48,14 +51,101 @@ $orange: #f94d1c;
       }
     }
   }
+  @media screen and (max-width: 1250px) {
+    .showcase-container .showcase-left {
+      padding: 4.5em 2em 0 1em;
+      h1 {
+        position: relative;
+        z-index: 1;
+      }
+      .showcase-swirl img {
+        right: -32em;
+        top: -27.6em;
+      }
+
+      p {
+        padding-bottom: 1em;
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    & {
+      height: 40em;
+    }
+    .showcase-container {
+      height: 100%;
+      .showcase-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 2em 0 2em;
+
+        h1 {
+          font-size: 4em;
+          text-align: center;
+        }
+        p {
+          position: relative;
+          z-index: 3;
+          text-align: center;
+        }
+        .showcase-buttons {
+          display: flex;
+          justify-content: center;
+          button {
+            margin-right: 1em;
+          }
+        }
+        .showcase-swirl {
+          position: relative;
+          pointer-events: none;
+
+          img {
+            right: -12em;
+            top: -23.6em;
+          }
+        }
+      }
+      .showcase-right {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .showcase-container .showcase-left {
+      .showcase-buttons {
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        .crito-button {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .showcase-container .showcase-left {
+      h1 {
+        font-size: 3em;
+      }
+      .showcase-buttons {
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        .crito-button {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
 }
 
 // Partners
 .partners {
   .partners-brands {
     padding: 4.5em 0 5em 0;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    display: flex;
+    justify-content: space-evenly;
   }
   .partners-model {
     display: flex;
@@ -65,14 +155,7 @@ $orange: #f94d1c;
     border: $lightGrey solid 0.0625em;
     .partners-model-left {
       max-width: 28.75em;
-      h5 {
-        color: $orange;
-        font-size: 1.125em;
-        padding-bottom: 1em;
-      }
       h1 {
-        font-size: 2.8em;
-        font-weight: 900;
         padding-bottom: 1em;
       }
     }
@@ -87,12 +170,167 @@ $orange: #f94d1c;
           width: 2.5em;
           padding-bottom: 1.5em;
         }
-        h3 {
-          font-size: 1.375em;
-        }
+
         p {
           color: $darkGrey;
         }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .partners-brands {
+      flex-wrap: wrap;
+      .partners-brands-logo {
+        width: 33.33%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .partners-model {
+      flex-direction: column;
+      align-items: center;
+      .partners-model-left {
+        max-width: 100%;
+        padding-bottom: 3em;
+      }
+      .partners-model-right {
+        margin-left: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .partners-model {
+      padding: 2em;
+      .partners-model-right {
+        h1 {
+          font-size: 3em;
+        }
+      }
+      .partners-model-right {
+        grid-template-columns: auto;
+        .partners-model-card {
+          padding: 1em 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .partners-brands .partners-brands-logo {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .partners-brands .partners-brands-logo {
+      width: 100%;
+    }
+  }
+}
+
+.about {
+  display: flex;
+  padding: 7.5em 1em 0;
+  justify-content: space-around;
+  .about-left {
+    .about-profile {
+      position: relative;
+
+      img {
+        width: 33.3em;
+      }
+      .about-profile-text {
+        position: relative;
+        bottom: 14em;
+        right: 3.5em;
+        width: 23em;
+        background-color: $lightBlue;
+        padding: 2em 1.5em 3.4375em 1.5em;
+        .about-profile-text-heading {
+          display: flex;
+          .about-profile-text-heading-black {
+            color: $blackish;
+          }
+        }
+      }
+    }
+  }
+  .about-right {
+    width: 33.25em;
+    h1 {
+      padding-bottom: 1em;
+    }
+    p {
+      color: $darkGrey;
+    }
+    .about-buttons {
+      padding-top: 2.5em;
+      display: flex;
+      align-items: center;
+      .crito-button {
+        margin-right: 2.4em;
+      }
+      .about-buttons-play {
+        display: flex;
+        align-items: center;
+        .crito-button-round {
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 2em;
+    .about-left {
+      padding-bottom: 2em;
+      .about-profile {
+        position: absolute;
+      }
+    }
+    .about-right {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    padding: 5em 0;
+    .about-left {
+      .about-profile {
+        .about-profile-text {
+          right: 0;
+          width: 100%;
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .about-right {
+      padding: 0 2em;
+      .about-buttons {
+        flex-direction: column;
+        align-items: start;
+        .crito-button {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    padding: 5em 0;
+    .about-left {
+      .about-profile {
+        position: inherit;
+        .about-profile-text {
+          position: inherit;
+          .about-profile-text-heading {
+            flex-direction: column;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }
