@@ -45,6 +45,11 @@ $darkBlue: #0e1021;
     font-size: 1.125em;
     padding-bottom: 1em;
   }
+  @media screen and (max-width: 1200px) {
+    h1 {
+      font-size: 3em;
+    }
+  }
 }
 
 .container {
@@ -390,6 +395,12 @@ footer {
     width: 0.95em;
   }
   &:hover {
+    background-color: $blackish;
+    svg {
+      color: white;
+    }
+  }
+  &.crito-button-round-black {
     background-color: $blackish;
     svg {
       color: white;

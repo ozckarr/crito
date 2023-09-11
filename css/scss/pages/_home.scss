@@ -98,7 +98,6 @@ $orange: #f94d1c;
         }
         .showcase-swirl {
           position: relative;
-          pointer-events: none;
 
           img {
             right: -12em;
@@ -125,9 +124,6 @@ $orange: #f94d1c;
   }
   @media screen and (max-width: 400px) {
     .showcase-container .showcase-left {
-      h1 {
-        font-size: 3em;
-      }
       .showcase-buttons {
         flex-direction: column;
         position: relative;
@@ -181,9 +177,13 @@ $orange: #f94d1c;
     .partners-brands {
       flex-wrap: wrap;
       .partners-brands-logo {
-        width: 33.33%;
+        width: 33%;
         display: flex;
         justify-content: center;
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
     .partners-model {
@@ -226,6 +226,7 @@ $orange: #f94d1c;
   }
 }
 
+// About
 .about {
   display: flex;
   padding: 7.5em 1em 0;
@@ -331,6 +332,258 @@ $orange: #f94d1c;
       img {
         width: 100%;
         height: auto;
+      }
+    }
+  }
+}
+
+// Services
+.services {
+  background-color: $beige;
+  padding: 7.5em 0;
+  .services-container {
+    padding: 0 1em;
+    h1 {
+      padding-bottom: 1em;
+    }
+
+    .services-cards {
+      display: grid;
+      padding-bottom: 3em;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 1.875em;
+
+      .services-card {
+        cursor: pointer;
+        padding: 3em 1.875em 2em;
+        background-color: white;
+        .services-small-line {
+          height: 0.125em;
+          width: 2em;
+          background-color: $blackish;
+          margin-bottom: 1em;
+        }
+        p {
+          padding-bottom: 1.625em;
+        }
+        .services-card-button {
+          display: flex;
+          justify-content: end;
+          width: 100%;
+        }
+        &:hover {
+          background-color: $yellow;
+          .crito-button-round {
+            background-color: white;
+            border: white;
+            svg {
+              color: $blackish;
+            }
+          }
+        }
+      }
+    }
+    .services-button {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .services-container {
+      .services-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .services-container {
+      .services-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+// Why Us
+.whyUs {
+  overflow: hidden;
+  .container {
+    padding: 7.5em 1em;
+    display: flex;
+    .whyUs-left {
+      width: 37%;
+      h1 {
+        padding-bottom: 1em;
+      }
+      .whyUs-cards {
+        .whyUs-card {
+          display: flex;
+          align-items: center;
+          padding-bottom: 2.625em;
+          p {
+            color: $darkGrey;
+          }
+          svg {
+            margin-right: 2em;
+            height: 2em;
+            width: 2em;
+            padding: 0.75em;
+            border-radius: 50%;
+            border: $lightGrey solid 0.0625em;
+          }
+        }
+      }
+    }
+    .whyUs-right {
+      width: 63%;
+      padding: 5em 0 0 5em;
+      img {
+        max-width: 40.3125em;
+        max-height: 31.5625em;
+        z-index: 3;
+        position: relative;
+      }
+      .whyUs-background-wrap {
+        position: relative;
+        .whyUs-background {
+          position: absolute;
+          z-index: 0;
+          top: -22em;
+          left: -5em;
+          width: 66.0625em;
+          height: 26.5625em;
+          background-color: $beige;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .container {
+      padding: 0 2em 7.5em;
+      display: flex;
+      flex-direction: column-reverse;
+      .whyUs-left {
+        width: 100%;
+        h1 {
+          font-size: 3em;
+        }
+        .whyUs-cards {
+          display: flex;
+          flex-wrap: wrap;
+          .whyUs-card {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            padding: 0 0.5em 2.625em;
+            p {
+              color: $darkGrey;
+            }
+            svg {
+              margin-right: 2em;
+              height: 2em;
+              width: 2em;
+              padding: 0.75em;
+              border-radius: 50%;
+              border: $lightGrey solid 0.0625em;
+            }
+          }
+        }
+      }
+      .whyUs-right {
+        width: 100%;
+        padding: 5em 0;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+        .whyUs-background-wrap {
+          .whyUs-background {
+            z-index: 0;
+            top: -29em;
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .container {
+      .whyUs-left {
+        .whyUs-cards {
+          .whyUs-card {
+            width: 100%;
+            justify-content: center;
+            padding: 0 0 2.625em 0;
+          }
+        }
+      }
+      .whyUs-right {
+        .whyUs-background-wrap {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Project
+.project {
+  padding: 0 1em 5.75em 1em;
+  .project-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 5em;
+  }
+  .project-cards {
+    display: grid;
+    grid-template: "auto auto";
+    grid-gap: 1.875em;
+    .project-card {
+      img {
+        width: 100%;
+        height: auto;
+      }
+      h3 {
+        border-bottom: $lightGrey solid 0.0625em;
+        margin-bottom: 1em;
+      }
+      .project-read-more {
+        display: flex;
+        justify-content: end;
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+            text-shadow: 0.0625em 0 0 currentColor;
+          }
+        }
+        svg {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .project-button {
+    padding-top: 3.75em;
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (max-width: 700px) {
+    padding: 0 2em 5.75em 2em;
+    .project-title {
+      padding-bottom: 1em;
+    }
+    .project-cards {
+      display: grid;
+      grid-template: "auto ";
+      grid-gap: 0;
+      .project-card {
+        padding-bottom: 1em;
       }
     }
   }
