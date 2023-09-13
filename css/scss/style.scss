@@ -373,6 +373,14 @@ footer {
       color: $beige;
     }
   }
+  &.crito-button-yellow {
+    background-color: $yellow;
+    border: 0.025em solid $blackish;
+    &:hover {
+      background-color: $blackish;
+      color: $yellow;
+    }
+  }
   &.crito-button-black {
     background-color: $blackish;
     color: white;
@@ -404,6 +412,26 @@ footer {
     background-color: $blackish;
     svg {
       color: white;
+    }
+  }
+}
+
+// Dots
+.carusel-dots {
+  display: flex;
+  justify-content: center;
+  .carusel-dot {
+    height: 0.75em;
+    width: 0.75em;
+    margin: 0 0.45em;
+    border-radius: 50%;
+    background-color: $darkGrey;
+    cursor: pointer;
+    &.selected-dot {
+      background-color: $blackish;
+    }
+    &:hover {
+      border: 0.25em $orange solid;
     }
   }
 }
