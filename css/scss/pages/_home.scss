@@ -792,6 +792,12 @@ $orange: #f94d1c;
     padding: 0 1em;
     .news-title {
       padding-bottom: 2em;
+      display: flex;
+      justify-content: space-between;
+      .news-title-button {
+        display: flex;
+        flex-direction: column-reverse;
+      }
     }
     .news-cards {
       display: flex;
@@ -800,6 +806,91 @@ $orange: #f94d1c;
 
       .news-card {
         width: 31%;
+        position: relative;
+        .news-img {
+          width: 100%;
+          height: auto;
+          padding-bottom: 1.5em;
+        }
+        .news-date {
+          background-color: $yellow;
+          position: absolute;
+          top: 1em;
+          left: 1em;
+          padding: 1em 1em 0.5em;
+          h3 {
+            line-height: 1em;
+          }
+        }
+        .news-text {
+          .news-category {
+            padding-bottom: 1em;
+          }
+          h3 {
+            padding-bottom: 0.75em;
+            line-height: 1.5em;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .news-text {
+            .news-category {
+              text-decoration: underline;
+            }
+            h3 {
+              text-decoration: underline;
+            }
+          }
+          .news-img {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .news-container {
+      padding: 0 1em;
+      .news-title {
+        flex-direction: column;
+        .news-title-button {
+          display: flex;
+          flex-direction: column-reverse;
+          padding-top: 1em;
+        }
+      }
+      .news-cards {
+        .news-card {
+          width: 31%;
+          position: relative;
+          .news-img {
+            width: 100%;
+            height: auto;
+            padding-bottom: 1.5em;
+          }
+          .news-date {
+            display: flex;
+            background-color: $yellow;
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: 1em 1em 0.5em;
+            h3 {
+              line-height: 1em;
+              padding-right: 0.25em;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .news-cards {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 4em;
+
+      .news-card {
         position: relative;
         .news-img {
           width: 100%;

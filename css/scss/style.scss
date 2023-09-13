@@ -390,6 +390,15 @@ footer {
       color: $blackish;
     }
   }
+  &.crito-button-white {
+    color: $blackish;
+    background-color: white;
+    border: 0.025em solid $blackish;
+    &:hover {
+      color: white;
+      background-color: $blackish;
+    }
+  }
 }
 
 .crito-button-round {
