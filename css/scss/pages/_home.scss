@@ -26,6 +26,7 @@ $orange: #f94d1c;
       }
       .showcase-buttons {
         display: flex;
+
         button {
           margin-right: 1em;
         }
@@ -369,6 +370,7 @@ $orange: #f94d1c;
         .services-card-button {
           display: flex;
           justify-content: end;
+
           width: 100%;
         }
         &:hover {
@@ -388,6 +390,8 @@ $orange: #f94d1c;
       margin: auto;
       display: flex;
       justify-content: center;
+      z-index: 11;
+      position: relative;
     }
   }
   @media screen and (max-width: 1000px) {
@@ -403,6 +407,20 @@ $orange: #f94d1c;
         grid-template-columns: 1fr;
       }
     }
+  }
+}
+.service-swirl {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 120em;
+  img {
+    position: absolute;
+    top: -2.5em;
+    right: 0;
+    width: 34em;
+    pointer-events: none;
+    z-index: 0;
   }
 }
 
@@ -799,6 +817,9 @@ $orange: #f94d1c;
         flex-direction: column-reverse;
       }
     }
+    .news-buttons-container {
+      display: none;
+    }
     .news-cards {
       display: flex;
       justify-content: space-between;
@@ -885,38 +906,110 @@ $orange: #f94d1c;
     }
   }
   @media screen and (max-width: 700px) {
-    .news-cards {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 4em;
-
-      .news-card {
+    .news-container {
+      .news-buttons-container {
         position: relative;
-        .news-img {
-          width: 100%;
-          height: auto;
-          padding-bottom: 1.5em;
-        }
-        .news-date {
-          background-color: $yellow;
+        display: block;
+        .news-buttons {
           position: absolute;
-          top: 1em;
-          left: 1em;
-          padding: 1em 1em 0.5em;
-          h3 {
-            line-height: 1em;
-          }
-        }
-        .news-text {
-          .news-category {
-            padding-bottom: 1em;
-          }
-          h3 {
-            padding-bottom: 0.75em;
-            line-height: 1.5em;
-          }
+          display: flex;
+          z-index: 5;
+          width: 100%;
+          padding: 0 0.5em;
+          top: 9em;
+          justify-content: space-between;
         }
       }
+      .news-cards {
+        .news-card-2,
+        .news-card-3 {
+          display: none;
+        }
+        .news-card {
+          width: 100%;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+// News Update
+.news-update {
+  background-color: $lightGrey;
+  padding: 6.25em 0;
+  .news-update-container {
+    z-index: 2;
+    position: relative;
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    .news-update-mail {
+      display: flex;
+      align-items: center;
+      input {
+        font-size: 1em;
+        padding: 0.9em 2em 0.9em 2em;
+        border-radius: 2em;
+        margin-right: 1em;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .news-update-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .news-update-title {
+        padding-bottom: 1em;
+        text-align: center;
+      }
+      .news-update-mail {
+        justify-content: center;
+      }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .news-update-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .news-update-title {
+        padding-bottom: 1em;
+        text-align: center;
+      }
+      .news-update-mail {
+        justify-content: center;
+        flex-direction: column;
+        input {
+          height: 4.25em;
+          margin-bottom: 0.5em;
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.news-update-swirl {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  img {
+    position: absolute;
+    top: -2.5em;
+    right: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  @media screen and (max-width: 1600px) {
+    img {
+      top: 0;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    img {
+      top: 2em;
     }
   }
 }
