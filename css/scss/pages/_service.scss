@@ -1,0 +1,19 @@
+$beige: #f0efe9;
+
+.service-page {
+  padding: 0 0 5em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .service-page-bar {
+    height: 1em;
+    width: 100%;
+    background-color: $beige;
+  }
+  img {
+    width: 100%;
+    max-width: 70em;
+    height: auto;
+  }
+}
