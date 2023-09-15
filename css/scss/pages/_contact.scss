@@ -1,0 +1,183 @@
+@import "../colors";
+
+.contacts-connect {
+  height: 16em;
+  background-color: $beige;
+  width: 100%;
+
+  .contacts-connect-text {
+    display: flex;
+    position: relative;
+    z-index: 5;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .contacts-connect-text-top {
+      display: flex;
+
+      a {
+        text-decoration: none;
+        color: $blackish;
+        position: relative;
+        height: 1.5em;
+        width: 5em;
+        text-align: center;
+
+        h2 {
+          font-size: 1em;
+          &.selected {
+            text-shadow: 0.0625em 0 0 currentColor;
+          }
+        }
+        &:hover::after {
+          display: block;
+          content: "";
+          width: 1em;
+          height: 0.125em;
+          background: $blackish;
+          position: absolute;
+          bottom: 0;
+          left: calc(50% - 0.5em);
+        }
+      }
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+  .contacts-connect-swirl {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 120em;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    @media screen and (max-width: 850px) {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.contacts-info {
+  .contacts-info-container {
+    padding: 7.5em 1em;
+    .contacts-info-cards {
+      display: grid;
+      grid-template: "auto auto auto";
+      grid-gap: 1.875em;
+      .contacts-info-card {
+        padding: 3em 3.75em 3.3em 3.75em;
+        border: $lightGrey solid 0.0625em;
+        display: flex;
+        .contacts-info-card-left {
+          button {
+            cursor: default;
+          }
+          padding-right: 1.5em;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .contacts-info-container {
+      .contacts-info-cards {
+        .contacts-info-card {
+          padding: 3em 2em 3em 2em;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .contacts-info-container {
+      .contacts-info-cards {
+        grid-template: " auto";
+
+        .contacts-info-card {
+          padding: 1.5em 3.75em 1.5em 3.75em;
+          .contacts-info-card-left {
+            display: flex;
+
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .contacts-info-container {
+      padding: 2em 1em;
+
+      .contacts-info-cards {
+        .contacts-info-card {
+          padding: 1em 1.5em 1em 1.5em;
+        }
+      }
+    }
+  }
+}
+
+.contact-message {
+  padding: 0 1em 7.5em 1em;
+  .contact-message-container {
+    background-color: $beige;
+    max-width: 82.5em;
+    margin: auto;
+    padding: 7.75em 9.375em 6.25em 9.375em;
+    .contact-message-text {
+      margin: auto;
+      max-width: 28em;
+      text-align: center;
+      padding-bottom: 1em;
+    }
+  }
+  .contact-message-input {
+    input,
+    .large-textbox {
+      font-size: 1em;
+      padding: 0.9em 2em 0.9em 2em;
+      border-radius: 2em;
+      width: 100%;
+      border: none;
+      margin-bottom: 0.75em;
+      &.large-textbox {
+        height: 10em;
+        margin-bottom: 2em;
+      }
+    }
+    .crito-button {
+      width: 100%;
+      border: $yellow solid 0.0625em;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    padding: 0 1em 2em 1em;
+    .contact-message-container {
+      padding: 3em;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0 1em 2em 1em;
+    .contact-message-container {
+      padding: 3em 1em;
+    }
+  }
+}
+
+.contacts-map {
+  width: 100%;
+  max-width: 120em;
+  height: 38.75em;
+  background-image: url(../../css/images/map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-position: center;
+}

@@ -979,13 +979,182 @@
   height: auto;
 }
 
+.contacts-connect {
+  height: 16em;
+  background-color: #f0efe9;
+  width: 100%;
+}
+.contacts-connect .contacts-connect-text {
+  display: flex;
+  position: relative;
+  z-index: 5;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.contacts-connect .contacts-connect-text .contacts-connect-text-top {
+  display: flex;
+}
+.contacts-connect .contacts-connect-text .contacts-connect-text-top a {
+  text-decoration: none;
+  color: #191919;
+  position: relative;
+  height: 1.5em;
+  width: 5em;
+  text-align: center;
+}
+.contacts-connect .contacts-connect-text .contacts-connect-text-top a h2 {
+  font-size: 1em;
+}
+.contacts-connect .contacts-connect-text .contacts-connect-text-top a h2.selected {
+  text-shadow: 0.0625em 0 0 currentColor;
+}
+.contacts-connect .contacts-connect-text .contacts-connect-text-top a:hover::after {
+  display: block;
+  content: "";
+  width: 1em;
+  height: 0.125em;
+  background: #191919;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 0.5em);
+}
+.contacts-connect .contacts-connect-text h1 {
+  text-align: center;
+}
+.contacts-connect .contacts-connect-swirl {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 120em;
+}
+.contacts-connect .contacts-connect-swirl img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media screen and (max-width: 850px) {
+  .contacts-connect .contacts-connect-swirl img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.contacts-info .contacts-info-container {
+  padding: 7.5em 1em;
+}
+.contacts-info .contacts-info-container .contacts-info-cards {
+  display: grid;
+  grid-template: "auto auto auto";
+  grid-gap: 1.875em;
+}
+.contacts-info .contacts-info-container .contacts-info-cards .contacts-info-card {
+  padding: 3em 3.75em 3.3em 3.75em;
+  border: #dad9d3 solid 0.0625em;
+  display: flex;
+}
+.contacts-info .contacts-info-container .contacts-info-cards .contacts-info-card .contacts-info-card-left {
+  padding-right: 1.5em;
+}
+.contacts-info .contacts-info-container .contacts-info-cards .contacts-info-card .contacts-info-card-left button {
+  cursor: default;
+}
+@media screen and (max-width: 1200px) {
+  .contacts-info .contacts-info-container .contacts-info-cards .contacts-info-card {
+    padding: 3em 2em 3em 2em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contacts-info .contacts-info-container .contacts-info-cards {
+    grid-template: " auto";
+  }
+  .contacts-info .contacts-info-container .contacts-info-cards .contacts-info-card {
+    padding: 1.5em 3.75em 1.5em 3.75em;
+  }
+  .contacts-info .contacts-info-container .contacts-info-cards .contacts-info-card .contacts-info-card-left {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contacts-info .contacts-info-container {
+    padding: 2em 1em;
+  }
+  .contacts-info .contacts-info-container .contacts-info-cards .contacts-info-card {
+    padding: 1em 1.5em 1em 1.5em;
+  }
+}
+
+.contact-message {
+  padding: 0 1em 7.5em 1em;
+}
+.contact-message .contact-message-container {
+  background-color: #f0efe9;
+  max-width: 82.5em;
+  margin: auto;
+  padding: 7.75em 9.375em 6.25em 9.375em;
+}
+.contact-message .contact-message-container .contact-message-text {
+  margin: auto;
+  max-width: 28em;
+  text-align: center;
+  padding-bottom: 1em;
+}
+.contact-message .contact-message-input input,
+.contact-message .contact-message-input .large-textbox {
+  font-size: 1em;
+  padding: 0.9em 2em 0.9em 2em;
+  border-radius: 2em;
+  width: 100%;
+  border: none;
+  margin-bottom: 0.75em;
+}
+.contact-message .contact-message-input input.large-textbox,
+.contact-message .contact-message-input .large-textbox.large-textbox {
+  height: 10em;
+  margin-bottom: 2em;
+}
+.contact-message .contact-message-input .crito-button {
+  width: 100%;
+  border: #f9d783 solid 0.0625em;
+}
+@media screen and (max-width: 800px) {
+  .contact-message {
+    padding: 0 1em 2em 1em;
+  }
+  .contact-message .contact-message-container {
+    padding: 3em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-message {
+    padding: 0 1em 2em 1em;
+  }
+  .contact-message .contact-message-container {
+    padding: 3em 1em;
+  }
+}
+
+.contacts-map {
+  width: 100%;
+  max-width: 120em;
+  height: 38.75em;
+  background-image: url(../../css/images/map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-position: center;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 * a,
-* p {
+* p,
+* textarea {
   font-family: "Inter", sans-serif;
   color: #191919;
   line-height: 1.625em;

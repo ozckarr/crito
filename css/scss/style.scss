@@ -2,22 +2,15 @@
 @import "./pages/service";
 @import "./pages/news";
 @import "./pages/contact";
-
-$beige: #f0efe9;
-$yellow: #f9d783;
-$orange: #f94d1c;
-$lightGrey: #dad9d3;
-$darkGrey: #a4a4a4;
-$blackish: #191919;
-$lightBlue: #beebff;
-$darkBlue: #0e1021;
+@import "./colors";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   a,
-  p {
+  p,
+  textarea {
     font-family: "Inter", sans-serif;
     color: $blackish;
     line-height: 1.625em;
