@@ -155,7 +155,7 @@
 @media screen and (max-width: 1200px) {
   .partners .partners-brands {
     flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
   }
   .partners .partners-brands .partners-brands-logo {
     width: 33%;
